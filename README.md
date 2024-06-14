@@ -22,3 +22,17 @@ The parameters, we can choose for LoRA are its alpha value and its rank.
 
 ### Datasets
 To fine-tune our (very) general model, we need to choose an (or multiple) appropriate dataset(s). Here, we are going to use the OG datasets `alpaca-self-instruct`, `natural-instruction` and `unnatural-instructions`. With these so-called instruction datasets, we are going to "show" the model how to behave when we prompt it to perform a task.
+
+In the folder `data_scripts` you can find the processing scripts for each of the mentioned datasets. In order to create a large dataset from them, we need to standardize the datasets first. The individual scripts for each dataset aim to bring each dataset to the following format:
+
+```json
+{
+    "instruction": "...",
+    "input": "...",
+    "output": "..."
+}
+```
+
+After standardizing the individual datasets, we concatenate all datasets into a single file and then sample train, test and dev splits.
+
+Finally, we will bring all data into a format for fine-tuning. In the final format, we will join all fields from above into single strings containing instructions, input (where applicable) and output.
