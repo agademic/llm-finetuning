@@ -3,6 +3,10 @@ data/
 
 .DS_Store
 
+# custom instruction data
+custom_instructions_database/custom_instructions_data.json
+custom_instructions_database/inputs.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
