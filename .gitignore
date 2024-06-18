@@ -3,6 +3,9 @@ data/
 
 .DS_Store
 
+# model files
+deployment_streamlit/model
+
 # custom instruction data
 custom_instructions_database/custom_instructions_data.json
 custom_instructions_database/inputs.db
