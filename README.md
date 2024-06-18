@@ -36,3 +36,15 @@ In the folder `data_scripts` you can find the processing scripts for each of the
 After standardizing the individual datasets, we concatenate all datasets into a single file and then sample train, test and dev splits.
 
 Finally, we will bring all data into a format for fine-tuning. In the final format, we will join all fields from above into single strings containing instructions, input (where applicable) and output.
+
+#### Custom Data
+In order to easily include our own custom data, I included a small streamlit app with a database attached. Here, we can insert data in the standardized format and build a small database with high quality instructions for our individual downstream task.
+
+<p align="center">
+  <img src="img/streamlit_landing.png" alt=""/>
+  <figcaption>Fig.2 - Streamlit Application to Generate Custom Data</figcaption>
+</p>
+
+We can export the whole sqllite database as JSON from the "View Entries" page.
+
+Run the streamlit app via terminal command `streamlit run custom_instructions_database/streamlit_app.py`.
