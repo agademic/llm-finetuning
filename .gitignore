@@ -2,7 +2,9 @@
 data/
 
 .DS_Store
-
+test_data_collator.py
+training_scripts/test_data.json
+training_scripts/workbench.ipynb
 # model files
 deployment_streamlit/model
 
